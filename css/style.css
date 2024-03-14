@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* (10 / 16) * 100 = 62.5 */
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #555;
+  background-color: #fffdfa;
+  line-height: 1;
+}
+
+.homepage-container {
+  width: 102rem;
+  margin: 7.8rem auto 0 auto;
+}
+
+/* REFACTORED */
+.navigation-list,
+.new-list {
+  list-style: none;
+}
+
+.navigation-link:active,
+.ranking-title:active {
+  color: #f15e50;
+}
+
+.main-title,
+.ranking-title {
+  color: #00001a;
+}
+
+.main-text,
+.new-text,
+.ranking-text {
+  color: #5d5f79;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
+.main-button,
+.new-topic {
+  color: #fffdfa;
+}
+
+/* GENERAL */
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+hr {
+  height: 0.1rem;
+  border-color: #5d5f79;
+  margin: 3rem 0;
+}
+
+/* LOGO AND NAVIGATION */
+.homepage-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.7rem;
+}
+
+.navigation-logo {
+  transform: scale(0.9);
+}
+
+.navigation-list {
+  display: flex;
+  list-style: none;
+  gap: 3.3rem;
+}
+
+.navigation-link {
+  font-size: 1.5rem;
+  color: #5d5f79;
+}
+
+/* SECTION MAIN */
+.homepage-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto;
+  column-gap: 2.6rem;
+  row-gap: 7rem;
+}
+
+.content-main {
+  grid-column: span 2;
+}
+
+.main-image {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.main-box {
+  display: flex;
+}
+
+.main-title {
+  width: 114rem;
+  font-size: 5.1rem;
+  font-weight: 800;
+}
+
+.main-text {
+  margin-bottom: 4.4rem;
+}
+
+.main-button {
+  background-color: #f15e50;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.4rem;
+  padding: 1.4rem 3rem;
+  text-transform: uppercase;
+}
+
+.main-button:active {
+  background-color: #00001a;
+}
+
+/* SECTION NEW */
+.content-new {
+  background-color: #00001a;
+  padding: 3rem 2.2rem;
+}
+
+.new-title {
+  color: #e9ab53;
+  font-size: 3.6rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.new-topic {
+  display: inline-block;
+  color: #fffdfa;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.new-topic:active {
+  color: #e9ab53;
+}
+
+.new-text {
+  color: #c5c6ce;
+  opacity: 0.8;
+}
+
+/* SECTION RANKING */
+.content-ranking {
+  display: flex;
+  grid-column: span 3;
+}
+
+.ranking-box {
+  display: flex;
+}
+
+.ranking-image {
+  height: 11.6rem;
+  width: 9rem;
+  margin-right: 2rem;
+}
+
+.ranking-position {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+}
+
+.ranking-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.ranking-text {
+  margin-top: 1.4rem;
+}
