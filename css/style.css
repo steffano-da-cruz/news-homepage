@@ -1,202 +1,135 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-html {
-  font-size: 68%; /* (11 / 16) * 100 = 68.75 */
+body,
+main,
+.left,
+.right {
+  display: flex;
+}
+
+body,
+main {
+  justify-content: center;
+  align-items: center;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  color: #555;
-  background-color: #fffdfa;
-  line-height: 1;
+  height: 100vh;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
 }
 
-.homepage-container {
-  width: 102rem;
-  margin: 8.2rem auto 12rem auto;
+main {
+  height: 37rem;
+  width: 62.8rem;
+  border-radius: 0.6rem;
+  background-color: rgba(255, 255, 255, 0.35);
+  position: relative;
 }
 
-/* REFACTORED */
-.navigation-list,
-.new-list {
-  list-style: none;
-}
-
-.navigation-link:active,
-.ranking-title:active {
-  color: #f15e50;
-}
-
-.main-title,
-.ranking-title {
-  color: #00001a;
-}
-
-.navigation-link,
-.main-text,
-.ranking-text {
-  color: #5d5f79;
-}
-
-.main-text,
-.new-text,
-.ranking-text {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
-}
-
-.new-text,
-.ranking-position {
-  color: #c5c6ce;
-}
-
-.main-button,
-.new-topic {
-  color: #fffdfa;
-}
-
-/* GENERAL */
-a:link,
-a:visited {
-  text-decoration: none;
-}
-
-hr {
-  height: 0.1rem;
-  border-color: #5d5f79;
-  margin: 3rem 0;
-}
-
-/* LOGO AND NAVIGATION */
-.homepage-navigation {
-  display: flex;
-  justify-content: space-between;
+.left,
+.right {
+  height: 37rem;
+  width: 31.4rem;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  margin-bottom: 4.7rem;
 }
 
-.navigation-logo {
-  transform: scale(1);
+.player--active {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
-.navigation-list {
-  display: flex;
-  list-style: none;
-  gap: 3.3rem;
+.player--winner {
+  background-color: #2f2f2f;
 }
 
-.navigation-link {
-  font-size: 1.5rem;
+.player--winner .player {
+  color: #c7365f;
 }
 
-/* SECTION MAIN */
-.homepage-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr auto;
-  column-gap: 2.6rem;
-  row-gap: 7rem;
+div {
+  text-align: center;
 }
 
-.content-main {
-  grid-column: span 2;
-}
-
-.main-image {
-  width: 100%;
-  margin-bottom: 3rem;
-}
-
-.main-box {
-  display: flex;
-}
-
-.main-title {
-  width: 114rem;
-  font-size: 5.1rem;
-  font-weight: 800;
-}
-
-.main-text {
-  margin-bottom: 4.4rem;
-}
-
-.main-button {
-  background-color: #f15e50;
-  font-size: 1.3rem;
-  font-weight: 600;
-  letter-spacing: 0.4rem;
-  padding: 1.4rem 3rem;
+.player-container {
+  color: #222222;
   text-transform: uppercase;
 }
 
-.main-button:active {
-  background-color: #00001a;
-}
-
-/* SECTION NEW */
-.content-new {
-  background-color: #00001a;
-  padding: 3rem 2.2rem;
-}
-
-.new-title {
-  color: #e9ab53;
-  font-size: 3.6rem;
+.player {
+  font-size: 2.5rem;
   font-weight: 600;
-  margin-bottom: 3.2rem;
 }
 
-.new-topic {
-  display: inline-block;
-  color: #fffdfa;
-  font-size: 1.7rem;
-  font-weight: 800;
-  letter-spacing: 0.1rem;
-  margin-bottom: 1.2rem;
+.score {
+  color: #c7365f;
+  font-size: 4.7rem;
 }
 
-.new-topic:active {
-  color: #e9ab53;
-}
-
-.new-text {
-  opacity: 0.8;
-}
-
-/* SECTION RANKING */
-.content-ranking {
+.current-container {
   display: flex;
-  justify-content: space-between;
-  grid-column: span 3;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #c7365f;
+  height: 7.6rem;
+  width: 13rem;
+  border-radius: 0.6rem;
 }
 
-.ranking-box {
-  display: flex;
-  flex-basis: 32rem;
+.current {
+  font-size: 1.1rem;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
-.ranking-image {
-  height: 11.6rem;
-  width: 9rem;
-  margin-right: 2rem;
+.current-score {
+  font-size: 2rem;
+  color: #ffffff;
 }
 
-.ranking-position {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 1.4rem;
+img {
+  position: absolute;
+  width: 6.1rem;
+  top: 28%;
 }
 
-.ranking-title {
-  font-size: 1.7rem;
-  font-weight: 900;
+.btn {
+  position: absolute;
+  cursor: pointer;
+  position: absolute;
+  color: #444444;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.1rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
-.ranking-text {
-  margin-top: 1.4rem;
+.new-game {
+  top: 7%;
+}
+
+.roll-dice {
+  top: 67%;
+}
+
+.hold {
+  top: 78%;
+}
+
+.hidden {
+  display: none;
 }
