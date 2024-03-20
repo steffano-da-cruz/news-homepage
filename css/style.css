@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 62.5%; /* (10 / 16) * 100 = 62.5 */
+  font-size: 68%; /* (11 / 16) * 100 = 68.75 */
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 
 .homepage-container {
   width: 102rem;
-  margin: 7.8rem auto 0 auto;
+  margin: 8.2rem auto 12rem auto;
 }
 
 /* REFACTORED */
@@ -36,12 +36,22 @@ body {
   color: #00001a;
 }
 
+.navigation-link,
+.main-text,
+.ranking-text {
+  color: #5d5f79;
+}
+
 .main-text,
 .new-text,
 .ranking-text {
-  color: #5d5f79;
   font-size: 1.4rem;
   line-height: 2.2rem;
+}
+
+.new-text,
+.ranking-position {
+  color: #c5c6ce;
 }
 
 .main-button,
@@ -70,7 +80,7 @@ hr {
 }
 
 .navigation-logo {
-  transform: scale(0.9);
+  transform: scale(1);
 }
 
 .navigation-list {
@@ -81,7 +91,6 @@ hr {
 
 .navigation-link {
   font-size: 1.5rem;
-  color: #5d5f79;
 }
 
 /* SECTION MAIN */
@@ -156,18 +165,19 @@ hr {
 }
 
 .new-text {
-  color: #c5c6ce;
   opacity: 0.8;
 }
 
 /* SECTION RANKING */
 .content-ranking {
   display: flex;
+  justify-content: space-between;
   grid-column: span 3;
 }
 
 .ranking-box {
   display: flex;
+  flex-basis: 32rem;
 }
 
 .ranking-image {
@@ -183,7 +193,7 @@ hr {
 }
 
 .ranking-title {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 900;
 }
 
