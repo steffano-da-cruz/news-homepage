@@ -5,7 +5,7 @@
 }
 
 html {
-  font-size: 68%; /* (11 / 16) * 100 = 68.75 */
+  font-size: 68%; /* (11 / 16) * 100 = 68.75% */
 }
 
 body {
@@ -17,7 +17,7 @@ body {
 
 .homepage-container {
   width: 102rem;
-  margin: 8.2rem auto 12rem auto;
+  margin: 0 auto 12rem auto;
 }
 
 /* REFACTORED */
@@ -76,7 +76,7 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4.7rem;
+  padding: 4rem 0;
 }
 
 .navigation-logo {
@@ -93,6 +93,21 @@ hr {
   font-size: 1.5rem;
 }
 
+.navigation-overlay {
+  display: none;
+}
+
+.navigation-mobile-button {
+  display: none;
+  border: none;
+  background-color: none;
+  cursor: pointer;
+}
+
+.mobile-button-icon {
+  font-size: 6rem;
+}
+
 /* SECTION MAIN */
 .homepage-content {
   display: grid;
@@ -106,9 +121,14 @@ hr {
   grid-column: span 2;
 }
 
-.main-image {
+.main-desktop-image {
+  display: block;
   width: 100%;
   margin-bottom: 3rem;
+}
+
+.main-mobile-image {
+  display: none;
 }
 
 .main-box {
@@ -188,7 +208,7 @@ hr {
 .ranking-image {
   height: 11.6rem;
   width: 9rem;
-  margin-right: 2rem;
+  margin-right: 2.8rem;
 }
 
 .ranking-position {

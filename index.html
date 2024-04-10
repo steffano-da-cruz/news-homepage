@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
     <title>Frontend Mentor | News homepage</title>
   </head>
   <body>
@@ -34,7 +35,8 @@
             />
           </svg>
         </a>
-        <nav>
+
+        <nav class="navigation-nav">
           <ul class="navigation-list">
             <li><a class="navigation-link" href="#">Home</a></li>
             <li><a class="navigation-link" href="#">New</a></li>
@@ -43,12 +45,24 @@
             <li><a class="navigation-link" href="#">Categories</a></li>
           </ul>
         </nav>
+
+        <div class="navigation-overlay"></div>
+
+        <button class="navigation-mobile-button">
+          <ion-icon class="mobile-button-icon" name="menu"></ion-icon>
+          <ion-icon class="mobile-button-icon" name="close"></ion-icon>
+        </button>
       </header>
       <main class="homepage-content">
         <section class="content-main">
           <img
-            class="main-image"
+            class="main-desktop-image"
             src="./assets/images/image-web-3-desktop.jpg"
+            alt="A Puzzle With Blocks"
+          />
+          <img
+            class="main-mobile-image"
+            src="./assets/images/image-web-3-mobile.jpg"
             alt="A Puzzle With Blocks"
           />
           <div class="main-box">
@@ -136,5 +150,14 @@
         </section>
       </main>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

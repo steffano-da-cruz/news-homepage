@@ -1,0 +1,277 @@
+/* 1200px / 16 = 75 */
+@media (max-width: 75em) {
+  html {
+    font-size: 62.5%; /* (10 / 16) x 100 = 62.5% */
+  }
+}
+
+/* 1088px / 16 = 68 */
+@media (max-width: 68em) {
+  html {
+    font-size: 56.25%; /* (9 / 16) x 100 = 56.25% */
+  }
+}
+
+/* 992px / 16 = 62 */
+@media (max-width: 62em) {
+  .homepage-container {
+    width: 80rem;
+  }
+
+  .homepage-content {
+    grid-template-columns: 80rem;
+    grid-template-rows: repeat(3, auto);
+    column-gap: 0;
+    row-gap: 9rem;
+  }
+
+  .content-main {
+    grid-column: 1 / -1;
+  }
+
+  .main-desktop-image {
+    display: none;
+  }
+
+  .main-mobile-image {
+    display: block;
+    width: 100%;
+    margin-bottom: 3.8rem;
+  }
+
+  .main-title {
+    font-size: 6rem;
+  }
+
+  .navigation-link,
+  .main-text,
+  .new-text,
+  .ranking-text {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+
+  .new-title {
+    font-size: 4rem;
+  }
+
+  .new-topic {
+    font-size: 2.2rem;
+  }
+
+  .content-ranking {
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: center;
+    align-items: baseline;
+    grid-column: 1 / -1;
+  }
+
+  .ranking-box {
+    flex-basis: auto;
+    align-items: center;
+  }
+
+  .ranking-image {
+    height: 15rem;
+    width: 12rem;
+  }
+
+  .ranking-position {
+    font-size: 4rem;
+  }
+
+  .ranking-title {
+    font-size: 2.4rem;
+  }
+}
+
+/* 800px / 16 = 50 */
+@media (max-width: 50em) {
+  html {
+    font-size: 40%;
+  }
+  body {
+    position: relative;
+  }
+
+  .homepage-container {
+    z-index: 0;
+  }
+
+  .navigation-logo {
+    transform: scale(0.7);
+  }
+
+  .main-text,
+  .new-text,
+  .ranking-text {
+    font-size: 2rem;
+  }
+
+  .navigation-nav {
+    display: flex;
+    justify-content: left;
+    background-color: #fffdfa;
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  .navigation-list {
+    margin: 25rem 0 0 5rem;
+    flex-direction: column;
+    gap: 8rem;
+  }
+
+  .navigation-link {
+    font-size: 3.8rem;
+    font-weight: 500;
+  }
+
+  .navigation-mobile-button {
+    display: block;
+    background: none;
+    z-index: 2;
+  }
+
+  .mobile-button-icon[name="menu"] {
+    display: block;
+  }
+
+  .mobile-button-icon[name="close"] {
+    display: none;
+  }
+
+  .nav-open .navigation-nav {
+    opacity: 1;
+  }
+
+  .nav-open .navigation-overlay {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .nav-open .mobile-button-icon[name="menu"] {
+    display: none;
+  }
+
+  .nav-open .mobile-button-icon[name="close"] {
+    display: block;
+  }
+
+  .main-title {
+    font-size: 6.6rem;
+  }
+}
+
+/* 576px / 16 = 36 */
+@media (max-width: 36em) {
+  html {
+    font-size: 30%;
+  }
+
+  .navigation-nav {
+    height: 100vh;
+    width: 55%;
+  }
+
+  .navigation-logo {
+    transform: scale(0.7);
+  }
+
+  .navigation-list {
+    margin: 30rem 0 0 5rem;
+  }
+
+  .navigation-link {
+    font-size: 3.9rem;
+  }
+
+  .mobile-button-icon {
+    font-size: 8rem;
+  }
+
+  .main-box {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .main-box div {
+    flex-basis: auto;
+  }
+
+  .main-title {
+    width: 80rem;
+    font-size: 9.4rem;
+    flex-basis: auto;
+    margin-bottom: 1.8rem;
+  }
+
+  .main-text,
+  .new-text,
+  .ranking-text {
+    font-size: 3.2rem;
+    line-height: 5rem;
+  }
+
+  .main-text {
+    margin-bottom: 7rem;
+  }
+
+  .main-button {
+    font-size: 2.2rem;
+    padding: 2.4rem 5rem;
+  }
+
+  .content-new {
+    padding: 4.8rem 3rem;
+  }
+
+  .new-title {
+    font-size: 5rem;
+    margin-bottom: 6rem;
+  }
+
+  .new-topic {
+    font-size: 3.6rem;
+  }
+
+  .content-ranking {
+    gap: 6rem;
+  }
+
+  .ranking-image {
+    height: 23rem;
+    width: 20rem;
+  }
+
+  .ranking-position {
+    font-size: 7rem;
+  }
+
+  .ranking-title {
+    font-size: 3.5rem;
+  }
+}
+
+/* 448px / 16 = 28 */
+@media (max-width: 28em) {
+  html {
+    font-size: 25%;
+  }
+
+  .mobile-button-icon {
+    font-size: 10rem;
+  }
+}
